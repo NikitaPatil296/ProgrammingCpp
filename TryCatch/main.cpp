@@ -18,9 +18,7 @@ int main()
         result = a / b;
         cout << "Result = " << result << endl;
     }
-    
-    catch (const runtime_error &e)
-    {
+    catch (const runtime_error &e){
         cout << "Runtime Error: " << e.what() << endl;
     }
     catch(const invalid_argument& e){
@@ -33,10 +31,43 @@ int main()
         cout << "Unknown exception caught" << endl; 
     }
 
+
     cout << "-----Program continue after try-catch-----" << endl;
-    
     for(int i = 0; i<5 ; i++){
         cout << " Number:" << i << endl;
     }
     return 0;
 }
+
+
+/* NOTE */
+
+// Try–Catch in C++ (Micro Notes)
+
+// try { } → block for risky code.
+
+// Must be followed by at least one catch.
+
+// throw <exception> → used to raise an error.
+
+// Exceptions can be standard (runtime_error, invalid_argument, etc.) or custom.
+
+// catch (const exceptionType &e) → handles a specific exception.
+
+// catch (...) → handles any exception (last resort).
+
+// Once an exception is thrown → control jumps to the first matching catch.
+
+// Code after throw inside try is skipped.
+
+// After catch finishes, program continues normally.
+
+// Catch exceptions by const reference (avoids slicing & extra copies).
+
+// Order matters → place specific catches first, then generic.
+
+// Use exceptions for error handling, not for normal program flow.
+
+// Keep try blocks as small as possible.
+
+// RAII ensures resources are cleaned up even if an exception occurs.
