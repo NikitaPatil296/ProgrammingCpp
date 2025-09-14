@@ -1,0 +1,10 @@
+RAII stands for Resource Acquisition Is Initialization.
+A resource (like memory, file handles, mutexes, sockets, etc.) is acquired in a constructor.
+The resource is released in the destructor.
+
+
+Why use RAII?
+
+Prevents resource leaks (memory, file handles, locks, etc.).
+Simplifies code since cleanup is automatic.
+Works seamlessly with stack unwinding (when exiting a scope due to normal execution or exceptions).
