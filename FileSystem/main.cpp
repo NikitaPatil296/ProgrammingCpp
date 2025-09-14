@@ -45,5 +45,19 @@ int main()
     }else{
         cout << "Failed to open file" << endl;
     }
+
+    // Reading Mode---
+    fs.open(filename,std::ios::in);
+    if(fs.is_open()){
+        cout << "File open to read" << endl;
+        std::string line;
+        while(getline(fs,line)){
+            cout << line << endl;
+        }
+        fs.close();
+        cout << "File Read syccessfully" << endl;
+    }else{
+        cout<< "Failed to read file" << endl;
+    }
     return 0;
 }
