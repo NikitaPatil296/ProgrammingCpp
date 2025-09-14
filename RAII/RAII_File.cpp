@@ -8,7 +8,7 @@ RAII_File::RAII_File(const std::string& filename, std::ios::openmode mode){
         throw std::runtime_error("Failed to open file");
     }else{
         std::cout << "File opened: " << filename << std::endl;
-        file << " HELLO" << std::endl;
+        file << " HELLO" << std::endl;  // Write to file
     }
 }
 

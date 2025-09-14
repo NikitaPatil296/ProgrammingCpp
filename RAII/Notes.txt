@@ -1,0 +1,24 @@
+RAII stands for Resource Acquisition Is Initialization.
+A resource (like memory, file handles, mutexes, sockets, etc.) is acquired in a constructor.
+The resource is released in the destructor.
+
+
+Why use RAII?
+
+Prevents resource leaks (memory, file handles, locks, etc.).
+Simplifies code since cleanup is automatic.
+Works seamlessly with stack unwinding (when exiting a scope due to normal execution or exceptions).
+
+-----------------------------------------------------------------
+
+std::ifstream (input file stream)
+Used only for reading from files.
+Example: std::ifstream in("data.txt");
+
+std::ofstream (output file stream)
+Used only for writing to files.
+Example: std::ofstream out("data.txt");
+
+std::fstream (file stream)
+Can be used for both reading and writing.
+Example: std::fstream file("data.txt", std::ios::in | std::ios::out);
