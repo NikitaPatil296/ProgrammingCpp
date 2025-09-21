@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 int main(){
     /* std::string str;
@@ -29,12 +30,15 @@ int main(){
         std::cout << str[i] << std::endl;
     } */
 
-    for (char ch :str)                               
+    /* for (char ch :str)                               
     {
        std::cout << ch << std::endl;
+    } */
+
+    int len = str.length();
+    for(int i = len-1; str[i]; --i ){
+        std::cout << str[i] ;
     }
     
-    
-
     return 0;
 }
